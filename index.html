@@ -1,19 +1,48 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Live Location Tracking</title>
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Teacher App</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="styles.css" />
 </head>
-<body>
+<body class="bg-gray-50 min-h-screen flex flex-col">
 
-    <h1>Live Location Tracking</h1>
-    <div id="map"></div>
+  <!-- Main App Content -->
+  <main id="mainContent" class="flex-grow pb-24"></main>
 
-    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
-    <script src="app.js"></script>
+  <!-- Bottom Navigation -->
+  <nav class="fixed bottom-0 left-0 right-0 bg-white shadow-inner border-t flex justify-around text-center z-50">
+    <button class="nav-btn flex-1 py-3 text-gray-500 active" data-tab="home">
+      <div class="flex flex-col items-center gap-1">
+        <span class="text-xl">🏠</span>
+        <span class="text-xs font-medium">Home</span>
+      </div>
+    </button>
+    <button class="nav-btn flex-1 py-3 text-gray-500" data-tab="student">
+      <div class="flex flex-col items-center gap-1">
+        <span class="text-xl">👨‍🎓</span>
+        <span class="text-xs font-medium">Student</span>
+      </div>
+    </button>
+    <button class="nav-btn flex-1 py-3 text-gray-500" data-tab="lock">
+      <div class="flex flex-col items-center gap-1">
+        <span class="text-xl">🔒</span>
+        <span class="text-xs font-medium">Lock</span>
+      </div>
+    </button>
+  </nav>
 
+  <!-- Modal -->
+  <div id="customModal" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+    <div class="bg-white p-6 rounded-xl shadow-lg max-w-xs w-full text-center">
+      <p id="modalMessage" class="text-base font-medium mb-4 text-gray-700"></p>
+      <button id="modalCloseBtn" class="bg-blue-600 text-white py-2 px-4 rounded-xl w-full hover:bg-blue-700 transition">OK</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
