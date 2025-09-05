@@ -1,17 +1,41 @@
-/* Basic page styling */
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 20px;
-    background-color: #f0f0f0;
+  font-family: 'Inter', sans-serif;
+   margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f3f4f6;
+  color: #333;
+  height: 100vh;
 }
 
-h1 {
-    text-align: center;
+.nav-btn.active {
+  color: #2563eb;
 }
 
-#map {
-    width: 100%;
-    height: 400px;
-    margin-top: 20px;
+.nav-btn.active span {
+  color: #2563eb;
+  font-weight: bold;
 }
+
+/* Add a little shadow to inputs and buttons */
+input, button {
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Splash screen styles */
+.splash-screen {
+  height: 100vh;
+  font-weight: 900;
+  letter-spacing: 2px;
+  user-select: none;
+}
+
+button {
+  cursor: pointer;
+  user-select: none;
+}
+
+/* Optional smoother scroll on mobile */
+html {
+  scroll-behavior: smooth;
+}
+
